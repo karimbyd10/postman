@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Menu</h2>
+
+<form method="GET">
+
+<input type="text" name="search" placeholder="Search food">
+
+<button class="btn btn-primary">Search</button>
+
+</form>
+
+<hr>
+
+<div class="row">
+
+{% for food in foods %}
+
+<div class="col-md-4">
+
+<div class="card mb-3">
+
+<img src="{{food.image.url}}" class="card-img-top">
+
+<div class="card-body">
+
+<h5>{{food.name}}</h5>
+
+<p>${{food.price}}</p>
+
+<a href="/food/{{food.id}}" class="btn btn-info">Details</a>
+
+<a href="/add-to-cart/{{food.id}}" class="btn btn-success">Add</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

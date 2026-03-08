@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Checkout</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<input class="form-control mb-2" name="name" placeholder="Your Name">
+
+<input class="form-control mb-2" name="phone" placeholder="Phone">
+
+<textarea class="form-control mb-2" name="address"></textarea>
+
+<button class="btn btn-primary">
+Place Order
+</button>
+
+</form>
+
+{% endblock %}
