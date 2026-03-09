@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Menu</title>
+</head>
+<body>
+
+<h1>Food Menu</h1>
+
+{% for food in foods %}
+    <p>{{ food.name }} - ${{ food.price }}</p>
+{% endfor %}
+
+</body>
+</html>
