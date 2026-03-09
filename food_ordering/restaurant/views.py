@@ -3,7 +3,7 @@ from .models import Food, Category, Order, OrderItem
 
 
 def home(request):
-    foods = Food.objects.all()[:6]
+    foods = Food.objects.all()
     return render(request,"home.html",{"foods":foods})
 
 
